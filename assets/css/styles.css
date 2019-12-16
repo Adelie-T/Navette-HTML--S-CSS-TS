@@ -1,0 +1,55 @@
+/**
+* styles.css : style de base de l'application
+**/
+
+@import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+/** Mieux vaut na pas importer car long à télécharger */
+body{
+    font-family: "Girassol", cursive;
+    font-size: 1em;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#date-selector {
+    /** selector for an IDebtified element*/
+    heiht : 1em;
+    background-color: rgba(240, 120, 0, 1);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 5em;
+}
+
+
+#date-selector div:nth-child(2){
+    /**dans la famille des div de date-selector, selectonne le 2e enfant */
+    text-align: center;
+}
+
+
+#date-selector div:last-child{
+    text-align: right;
+}
+
+.tour.bordered span:nth-child(2){
+    text-align: right;
+}
+
+.tour { 
+    /** selector for a class attributed element*/
+    height: 8em;
+    background-color: hsla(325, 15%, 60%, 0.7);
+    font-weight: bold; /** police en gras*/
+    color: hsla(325, 60%, 60%, 0.7); /** couleur de la police */
+    border-radius: 5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.tour.bordered{
+    border: solid 1px hsla(325, 60%, 60%, 0.7);
+}

@@ -6,70 +6,74 @@
         name="viewport" 
         content="width=device-width, initial-scale=1,maximum-scale=1, user-scable=no"
         >
-        <title>Hello HTML !</title>
+        <title>Navette Economique</title>
+        <!--Link stylesheets-->
+        <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/css/styles.css" rel="stylesheet">
+
     </head>
 
     <body>
-        <header>
-            <h1>HTML, CSS, Ecmascript</h1>
-        </header>
+        <div class="container"> <!--Container définit dans bootstrap-->
+            <div id="date-selector" class="row"> 
+                <div class="col-md-2">
+                    <a href="#" title="Previous date" class="btn btn-warning disabled" role="button">
+                        &lt;&lt;
+                    </a>
+                </div>
 
-        <!--Navigation links for my page-->
-        <nav>
-            <ol> <!--row list container-->
-                <li>
-                    <a href="#" title="Go to page HTML, CSS home">Home</a>
-                </li>
-                <Li>Who</Li>
-                <li>What</li>
-                <li>Where</li>
-                <li>Contact
-                    <ul>
-                        <li>Phone</li>
-                        <li>Adresse</li>
-                    </ul>
-                </li>
-            </ol>
-        </nav>
-        <!--End of navigation links-->
+                <div class="col-md-8">
+                    <span>16 déc. 2019</span>
+                </div>
+                    
+                <div class="col-md-2">
+                    <a href="#" title="Next date" class="btn btn-outline-success" role="button">
+                        &gt;&gt;
+                    </a>
+                </div>
 
-        <main>
-        <!--Begin of user visible content -->
-        <header>
-        <h2>Hello HTML </h2>
-        </header>
-        
-        <p>
-            Le <abbr title="Hyper Text Markup Language">HTML</abbr> ne dispose pas de structure <strong>itératives</strong>, ni <strong>conditionnelles</strong>. <br> Donc, pas question de boucler sur quoi que ce soit, ni de gérer des variables... 
-        </p>
-        <!--End of user visible content-->
-        </main>
 
-        <footer>
-            <nav>
+
+            </div>
+
+            <main>
                 <ul>
-                    <li>
-                        <a href="./legals.html" title="Mentions légales de vente">CGV</a>
+                    <!--Tour list of the day-->
+                    <li class="tour bordered" id="tour-1">
+                        <span class="badge">8h00</span>
+                        <form id="tour-form-1">
+                            <select size="1">
+                                <option value="" disabled selected>Nb. personne</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button type="button" disabled class="btn btn-primary">
+                                Reserver
+                            </button>                            
+                        </form>
+                        <span class="badge">
+                            5
+                        </span>
                     </li>
-                    <li>
-                        &gt;<a href="./example.html" title="Test">Ceci est un test</a>&lt;
-                    </li>
-                    <li>
-                        <a href="https://wwww.aelion.fr" target="_new" title="Aélion">&copy;Aelion 2019-2020</a>
-                    </li>
+
+                    <li class="tour bordered" id="tour-2">
+                        Tournée 2 11h00
+                        </li id="tour-1">
+
+                        <li class="tour bordered" id="tour-3">
+                        Tournée 3 14h00
+                        </li>
+
+                        <li class="tour bordered" id="tour-3">
+                        Tournée 4 17h00
+                        </li>
+                        <!--End tour list-->
                 </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="tel:+(33)6111111111" title="Call us!">Réserver</a>
-                    </li>
-                    <li>
-                        <a href="mailto:you@yopmail.com&subject=Contact me please!" title="Send us a mail">Contacter</a>
-                    </li>
-                </ul>
-            </nav>
-        </footer>
+            </main>
+        </div>
     </body>
 
 </html>

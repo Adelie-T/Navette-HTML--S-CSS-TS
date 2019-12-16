@@ -12,5 +12,8 @@
     "JS"
   ],
   "author": "Adelie",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
 }
