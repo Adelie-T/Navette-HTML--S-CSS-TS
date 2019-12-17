@@ -11,6 +11,11 @@
         <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="./assets/css/styles.css" rel="stylesheet">
 
+        <!--Add scripts -->
+        <script src="./dist/js/app.chunk.js"></script> <!--on charge d'abord les librairie tierses-->
+        <script src="./dist/js/app.js"></script>
+
+
     </head>
 
     <body>
@@ -24,7 +29,7 @@
                 </div>
 
                 <div class="col-md-8">
-                    <span>16 déc. 2019</span>
+                    <span id="current-date"></span>
                 </div>
                     
                 <div class="col-md-2">
@@ -67,20 +72,81 @@
 
                     </li>
 
-                    <li class="tour bordered" id="tour-2">
-                        Tournée 2 11h00
-                        </li id="tour-1">
+                    
+                    <li class="tour bordered row" id="tour-2">
+                        <div class="col-2"><span class="badge badge-segundary">11h00</span></div>                        
+                        <form id="tour-form-2" class="col-8">
+                            <div class="form-group">
+                                <select size="1">
+                                    <option value="" disabled selected>Nb. personne</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <button type="button" disabled class="btn btn-primary">
+                                    Reserver
+                                </button>  
+                            </div>                          
+                        </form>                     
+                        <span class="badge" class="col-2">
+                            5
+                        </span>
+                    </li>
+                        
+                    <li class="tour bordered row" id="tour-3">
+                        <div class="col-2"><span class="badge badge-segundary">14h00</span></div>                        
+                        <form id="tour-form-3" class="col-8">
+                            <div class="form-group">
+                                <select size="1">
+                                    <option value="" disabled selected>Nb. personne</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <button type="button" disabled class="btn btn-primary">
+                                    Reserver
+                                </button>  
+                            </div>                          
+                        </form>                      
+                        <span class="badge" class="col-2">
+                            5
+                        </span>
+                    </li>
 
-                        <li class="tour bordered" id="tour-3">
-                        Tournée 3 14h00
-                        </li>
-
-                        <li class="tour bordered" id="tour-3">
-                        Tournée 4 17h00
-                        </li>
+                    <li class="tour bordered row" id="tour-4">
+                        <div class="col-2"><span class="badge badge-segundary">17h00</span></div>                      
+                        <form id="tour-form-4" class="col-8">
+                            <div class="form-group">
+                                <select size="1">
+                                    <option value="" disabled selected>Nb. personne</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <button type="button" disabled class="btn btn-primary">
+                                    Reserver
+                                </button>  
+                            </div>                          
+                        </form>                  
+                        <span class="badge" class="col-2">
+                            5
+                        </span>
+                    </li>
                         <!--End tour list-->
                 </ul>
             </main>
+        </div>
+        <!--App loader -->
+        <div id="app-loader" class="outer-loader">
+            <div class="inner-loader">
+                <img src="./assets/image/loader-nico.gif" alt="Application loader animation">
+            </div>
         </div>
     </body>
 

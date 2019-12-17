@@ -1,24 +1,43 @@
 {
-  "name": "navette",
-  "version": "1.0.0",
-  "description": "Poor HTML and CSS",
-  "main": "./dist/main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "HTML",
-    "CSS",
-    "JS"
-  ],
-  "author": "Adelie",
-  "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1"
-  },
-  "devDependencies": {
-    "@types/jquery": "^3.3.31",
-    "typescript": "^3.7.3"
-  }
+    "name": "oop",
+    "version": "1.0.0",
+    "description": "Programmation OO avec Typescript",
+    "main": "./dist/main.js",
+    "scripts": {
+        "babel": "babel --presets es2015 ./src/app.ts -o ./dist/main.js",
+        "webpack:dev": "webpack --watch --mode development",
+        "webpack:build": "webpack --mode production -p"
+    },
+    "keywords": [
+        "Typescript",
+        "OOP"
+    ],
+    "author": "IDea Factory",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jquery": "^3.3.31",
+        "babel-cli": "^6.26",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.5",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-es2015": "^6.24.1",
+        "css-loader": "^3.2.1",
+        "cssnano": "^4.1.10",
+        "mini-css-extract-plugin": "^0.8.0",
+        "postcss-loader": "^3.0.0",
+        "sass": "^1.23.7",
+        "sass-loader": "^8.0.0",
+        "style-loader": "^1.0.1",
+        "ts-loader": "^6.2.0",
+        "typescript": "^3.6.4",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.2"
+    },
+    "dependencies": {
+        "animate.css": "^3.7.2",
+        "bootstrap": "^4.4.1",
+        "jquery": "^3.4.1",
+        "moment": "^2.24.0"
+    }
 }

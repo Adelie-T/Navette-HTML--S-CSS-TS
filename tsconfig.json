@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+         "baseUrl": ".",
+         "paths": { "*": ["types/*"] },
+         "outDir": "./dist/",
+         "noImplicitAny": true,
+         "module": "es6",
+         "moduleResolution": "node",
+         "allowSyntheticDefaultImports": true,
+         "target": "es2015",
+         "allowJs": true,
+         
+         "lib": ["dom", "dom.iterable", "es6", "es2015.promise"]
+    }
+}

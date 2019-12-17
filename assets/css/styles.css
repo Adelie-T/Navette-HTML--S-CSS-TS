@@ -16,7 +16,7 @@ ul{
 
 #date-selector {
     /** selector for an IDebtified element*/
-    heiht : 1em;
+    heiht : 1.5em;
     background-color: rgba(240, 120, 0, 1);
     margin-top: 1em;
     margin-bottom: 1em;
@@ -48,4 +48,35 @@ ul{
 
 .tour.bordered{
     border: solid 1px hsla(325, 60%, 60%, 0.7);
+}
+
+/**
+*App loader design
+**/
+#app-loader.outer-loader {
+    position: absolute; /**attribut de positionnement on fixe au pixel près le coin supérieur gauche par rapport au conteneur parent*/
+    top: 0;
+    left: 0; /** ici on le cale en haut à gauche de "body" */
+    width: 100%;
+    height: 100%; /**1000% quelque soit la taille de la fenêtre internet*/
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#app-loader.outer-loader .inner-loader{
+    position: relative; /**en position relative */
+    top: 50%; 
+    transform: translateY (-50%);
+    height: 150px;
+    width: 150px;
+    margin: 0 auto; /**Permet de centrer élément en haut et en bas à 0 et à gauche et à droite en automatique*/ 
+}
+
+#app-loader.outer-loader .inner-loader img{
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+#app-loader.hidden{ /**on cache le loader*/
+    display: none;
 }
