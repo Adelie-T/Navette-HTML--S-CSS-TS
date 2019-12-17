@@ -3,6 +3,7 @@
 import * as $ from 'jquery';
 
 import * as moment from 'moment'; //importe tout du package 'moment
+import { DatePickerComponent } from './date-picker/date-picker-component';
 /**
  * Main
  * @author Aelion
@@ -22,7 +23,18 @@ import * as moment from 'moment'; //importe tout du package 'moment
             success: (data: any) => { //data est la réponse de l'API - en json
                 currentDate.set(data.currentDateTime); //current Date est de type moment (définie ci-dessus) et currentDateTime est un champs de la data
                 console.log(`Date du jour : ${currentDate.toString()}`); 
-                $('span#current-date').html(currentDate.format('dddd DD MMMM YYYY'));
+                
+                const initialDate: JQuery = $('span#current-date'); //On crée une constante pour la "boite" span qui ne bougera pas même si le contenu bouge
+
+                initialDate.html(currentDate.format('dddd DD MMMM YYYY')) //renvoit la date du lien url
+
+                //on range (grace à un "toString" la valeur des date aujourd'hui (first) et celle qui est parcourue(current))
+                initialDate.data('first', currentDate.toString());
+                initialDate.data('current', currentDate.toString())
+
+                //Sets the event handlers
+                new DatePickerComponent();
+
                 $('#app-loader').addClass('hidden');
             },
             error: (xhr: any, error:any) => { //si le success se passe mal, on passe dans error : 

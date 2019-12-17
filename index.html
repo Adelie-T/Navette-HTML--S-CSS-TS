@@ -23,17 +23,19 @@
            
             <div id="date-selector" class="row"> 
                 <div class="col-md-2">
-                    <a href="#" title="Previous date" class="btn btn-warning disabled" role="button">
+                    <a href="#" previousDate title="Previous date" class="btn btn-warning disabled" role="button">
                         &lt;&lt;
                     </a>
                 </div>
 
                 <div class="col-md-8">
-                    <span id="current-date"></span>
+                    <span id="current-date" data-current="" data-first="" ></span> 
+                    <!--on ajoute les attributs data-current et data-first pour suivre la date de départ et celle parcouru-->
+                    <!--on les déclare ici car le dom est notre petite "base de données"-->
                 </div>
                     
                 <div class="col-md-2">
-                    <a href="#" title="Next date" class="btn btn-outline-success" role="button">
+                    <a href="#" nextDate title="Next date" class="btn btn-outline-success" role="button">
                         &gt;&gt;
                     </a>
                 </div>

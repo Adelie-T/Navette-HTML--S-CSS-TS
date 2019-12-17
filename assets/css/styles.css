@@ -51,6 +51,18 @@ ul{
 }
 
 /**
+*Targeting element by on attribute
+**/
+[nextDate] {
+    transform: rotate(0deg);
+    transition: all 0s .8s ease-in;
+}
+
+[nextDate]: hover {
+    transform: rotate(180deg);
+}
+
+/**
 *App loader design
 **/
 #app-loader.outer-loader {
