@@ -14,6 +14,11 @@
   "author": "Adelie",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.4.1"
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.31",
+    "typescript": "^3.7.3"
   }
 }

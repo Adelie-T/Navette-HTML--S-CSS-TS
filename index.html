@@ -14,7 +14,8 @@
     </head>
 
     <body>
-        <div class="container"> <!--Container définit dans bootstrap-->
+        <div class="container"> <!--Container est défini dans bootstrap-->
+           
             <div id="date-selector" class="row"> 
                 <div class="col-md-2">
                     <a href="#" title="Previous date" class="btn btn-warning disabled" role="button">
@@ -39,24 +40,31 @@
             <main>
                 <ul>
                     <!--Tour list of the day-->
-                    <li class="tour bordered" id="tour-1">
-                        <span class="badge">8h00</span>
-                        <form id="tour-form-1">
-                            <select size="1">
-                                <option value="" disabled selected>Nb. personne</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                            <button type="button" disabled class="btn btn-primary">
-                                Reserver
-                            </button>                            
+                    <li class="tour bordered row" id="tour-1">
+
+                        <div class="col-2"><span class="badge badge-segundary">8h00</span></div>
+                        
+                        <form id="tour-form-1" class="col-8">
+                            <div class="form-group">
+                                <select size="1">
+                                    <option value="" disabled selected>Nb. personne</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <button type="button" disabled class="btn btn-primary">
+                                    Reserver
+                                </button>  
+                            </div>                          
                         </form>
-                        <span class="badge">
+                        
+                       
+                        <span class="badge" class="col-2">
                             5
                         </span>
+
                     </li>
 
                     <li class="tour bordered" id="tour-2">

@@ -34,10 +34,6 @@ ul{
     text-align: right;
 }
 
-.tour.bordered span:nth-child(2){
-    text-align: right;
-}
-
 .tour { 
     /** selector for a class attributed element*/
     height: 8em;
