@@ -1,0 +1,22 @@
+/**
+* main
+* Import and load ...
+**/
+/**
+* variables
+* @author Aelion
+* @version 1.0.0
+**/
+@import url();
+/**
+* modal
+* Design of modal boxes
+**/
+div.outer-modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #cdcdcd;
+}
+
+/*# sourceMappingURL=custom.css.map*/

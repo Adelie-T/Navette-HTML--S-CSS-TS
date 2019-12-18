@@ -1,4 +1,5 @@
 import * as $ from 'jquery';
+import * as moment from 'moment';
 
 /**
  * DatePickerComponent
@@ -7,10 +8,8 @@ import * as $ from 'jquery';
  * Manage previous and next date buttons
  */
 
-export const currentDate: moment.Moment = moment().locale('fr');
-
  export class DatePickerComponent {
-     private readonly priviousButton: JQuery = $('[previousDate]'); //le nom d'attribut est entre crochets
+     private readonly previousButton: JQuery = $('[previousDate]'); //le nom d'attribut est entre crochets
      private readonly nextButton: JQuery = $('[nextDate]');
      private readonly currentDate: JQuery = $('span#current-date'); //c'est tout ça : <span id="current-date" data-current="" data-first="" ></span>
 

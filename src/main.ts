@@ -4,6 +4,10 @@ import * as $ from 'jquery';
 
 import * as moment from 'moment'; //importe tout du package 'moment
 import { DatePickerComponent } from './date-picker/date-picker-component';
+import { UserChoiceComponent } from './user-choice/user-choice-component';
+
+import './scss/main.scss'; 
+
 /**
  * Main
  * @author Aelion
@@ -28,12 +32,13 @@ import { DatePickerComponent } from './date-picker/date-picker-component';
 
                 initialDate.html(currentDate.format('dddd DD MMMM YYYY')) //renvoit la date du lien url
 
-                //on range (grace à un "toString" la valeur des date aujourd'hui (first) et celle qui est parcourue(current))
-                initialDate.data('first', currentDate.toString());
-                initialDate.data('current', currentDate.toString())
+                //on range (grace à un "toString") la valeur des dates aujourd'hui (first) et celle qui est parcourue(current)
+                initialDate.data('first', currentDate.toString()); //first sert à faire un test pour le retour en arrière
+                initialDate.data('current', currentDate.toString()) //current sera mise à jour au fur-et-à-mesure des clicks
 
                 //Sets the event handlers
                 new DatePickerComponent();
+                new UserChoiceComponent();
 
                 $('#app-loader').addClass('hidden');
             },
@@ -59,14 +64,15 @@ import { DatePickerComponent } from './date-picker/date-picker-component';
  }
 
  
- $(document).ready() => { //call back : est appelé après dès que le document sera prêt
+ $(document).ready(
+     () => { //call back : est appelé après dès que le document sera prêt
                         // c'est une fonctiopn flechée et anonyme
                         // ready est un gestionnaire d'evenment de jquery 
 
     console.log('Hi JQuery, document is ready and fullly loaded. Run the App!');
      //Boostraping of our app
       const app: Main = new Main();
- };  
+ });  
 
 
  
