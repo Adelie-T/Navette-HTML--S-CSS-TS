@@ -1,0 +1,19 @@
+/**
+* Usefull functions
+**/
+
+// on crée une fonction 
+@mixin outer {
+    position : absolute;
+    top : 0;
+    left : 0;
+    height : 100%;
+    width : 100%;
+}
+
+@mixin vertical-centered {
+    position: relative;
+    top: 0%;
+    transform: translateY(50%);
+}
+

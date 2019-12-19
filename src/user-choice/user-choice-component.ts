@@ -1,4 +1,6 @@
 import * as $ from 'jquery';
+import { ModalModule } from './../modules/modal/modal.module';
+import {InnerOptions} from './../modules/modal/inner-option-interface'
 /**
  * UserChoiceComponent
  * @author Aélion
@@ -12,13 +14,17 @@ import * as $ from 'jquery';
      // le selecteur form avec 'form' récupère TOUS les formulaires, c'est donc une collection
 
      private selects: JQuery;
+     private buttons: JQuery; 
 
      public constructor() {
          this.selects = this.forms.find('select'); 
          //sur le form de cette classe on applique la méthode find. 
          //on traverse l'arbre pour trouver tous les selects (Attention il faut qu'il y en ait qu'un)
 
+         this.buttons = this.forms.children('button');
+
          this.changeHandler();
+         this.buttonHandler();
 
      }
          private changeHandler() {
@@ -58,6 +64,18 @@ import * as $ from 'jquery';
 
                  }
              );
+         }
+
+         private buttonHandler() {
+             this.buttons.on( //ou directement $('form button').on()
+                 'click',
+                 (event: any): void => {
+                     new ModalModule(event, { //ou bien : const modal: ModalModule = new ModalModule();
+                        height: 600, //les paramètres d'une instance c'est ceux qu'on entre dans le constructeur
+                        width: 500
+                     }); 
+                 }
+             )
          }
 
  }

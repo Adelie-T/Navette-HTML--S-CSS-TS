@@ -3,13 +3,16 @@
 * Design of modal boxes
 **/
 
-div {
+
+
+div { //outer-modal est dans un div 
     &.outer-modal {
         // <=> div.outer-modal
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @include outer;
         background-color: lighten($modal_background_color, 30%);
-
+        .inner-modal { //inner-modal est un enfant de outer-modal
+            @include vertical-centered;
+            background-color: lighten($modal_background_color, 50);
+        }
     }
 }

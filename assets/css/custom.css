@@ -7,16 +7,26 @@
 * @author Aelion
 * @version 1.0.0
 **/
-@import url();
+/**
+* Usefull functions
+**/
 /**
 * modal
 * Design of modal boxes
 **/
 div.outer-modal {
   position: absolute;
-  width: 100%;
+  top: 0;
+  left: 0;
   height: 100%;
-  background-color: #cdcdcd;
+  width: 100%;
+  background-color: rgba(205, 205, 205, 0.7);
+}
+div.outer-modal .inner-modal {
+  position: relative;
+  top: 0%;
+  transform: translateY(50%);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*# sourceMappingURL=custom.css.map*/

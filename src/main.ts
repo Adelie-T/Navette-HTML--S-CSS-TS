@@ -6,7 +6,7 @@ import * as moment from 'moment'; //importe tout du package 'moment
 import { DatePickerComponent } from './date-picker/date-picker-component';
 import { UserChoiceComponent } from './user-choice/user-choice-component';
 
-import './scss/main.scss'; 
+import './scss/main.scss'; //permet de compiler les fichiers .scss et donc mettre à jour le custom.css
 
 /**
  * Main
