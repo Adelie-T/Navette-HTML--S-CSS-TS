@@ -13,7 +13,13 @@
 
 @mixin vertical-centered {
     position: relative;
-    top: 0%;
-    transform: translateY(50%);
+    top: 50%;
+    transform: translateY(-50%);
 }
+
+@mixin inner {
+        margin: 0 auto;
+        //border: ($modal_border);
+        //border-radius: 2em;
+    }
 

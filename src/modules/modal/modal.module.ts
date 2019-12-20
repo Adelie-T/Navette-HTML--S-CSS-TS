@@ -35,16 +35,56 @@ export class ModalModule {
                 );
 
             //changer le corps du modal pour afficher le nombre de places réservées
-            this.view.find('.modal-body').html(
+            this.view.find('#purchase-detail').html(
                 
-                $(event.target).parents('form').find('select').find('selected').html() //ça ne marche pas!
-                + ' place(s)'
+                $(event.target).parents('form').find('select').find('option:selected').val() 
+                + ' x 8 = '
+                + parseInt($(event.target).parents('form').find('select').find('option:selected').val().toString())*8
+                + ' €'
             );
-
                 
             $('body').append(this.view); //adds view to body in dom (de index.html)
+
+
+            //pourvoir valider l'achat une fois les champs remplis:
+                this.view.find('.custom-control-input').on(
+                    'change',
+                    (eventCgv : any) : void => {
+                        console.log('CGV acceptés');
+                        if (this.view.find('#user-name').val() == "" || this.view.find('#user-email').val() == "" || !this.view.find('.custom-control-input').is(':checked'))
+                        console.log('manque un champ');
+                        else {
+                            console.log('tudo bem');
+                            this.view.find('.btn-success').removeAttr('disabled');
+
+                            //Mettre à jour le formulaire selon la commande:
+                            this.view.find('.btn-success').on(
+                                'click',
+                                (eventVal : any) : void => {
+                                    eventVal.preventDefault(); //permet de simuler l'évenement sans le réaliser. 
+                                    console.log('jai compris que ça a validé sur : ' + $(event.target).parents('li').attr('id'));
+                                    
+                                    $(event.target).parents('li').children('div:last-child').children('.badge-secondary').html(
+                                        (
+                                            parseInt( $(event.target).parents('li').children('div:last-child').children('.badge-secondary').html())                                          
+                                         - parseInt($(event.target).parents('form').children('div').children('select').children('option:selected').html())
+                                        )
+                                        .toString()                                    
+                                    );
+
+                                    $(event.target).parents('form').children('div').children('select').children('option').removeAttr('selected');
+                                    $(event.target).parents('form').children('div').children('select').children('option:first').attr('selected', 'selected');
+
+                                    
+                                 }
+                                 )
+                        }
+                    }
+                )
+
             console.info('Place close button handler')
-            this.closeHandler(); 
+
+            this.closeHandler(); //removes view from dom = close modal
 
 
         });

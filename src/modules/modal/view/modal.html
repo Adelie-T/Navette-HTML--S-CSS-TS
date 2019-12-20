@@ -9,9 +9,41 @@
                 </button>
             </div>
         </div>
-        <div class="modal-body row"></div>
-        <div class="modal-footer row">
-            footer
-        </div>
+
+        <form id="purchase-form">
+            <!--Begin form-->
+            <div class="modal-body row">
+                <p id="purchase-detail" class="col-12"></p>
+
+                <!--Field : user name -->
+                <div class="form-group col-12">
+                    <label for="user-name" class="required">Votre nom : </label>
+                    <input type="text" id="user-name" class="form-control" name="user-name">
+                </div>
+
+                <!--Field : user email -->
+                <div class="form-group col-12">
+                    <label for="user-email" class="required">Votre adresse mail : </label>
+                    <input type="email" id="user-email" class="form-control" name="user-email">
+                </div>
+
+                <!--Validate CGV -->
+                <div class="custom-control custom-switch col-12">
+                    <input type="checkbox" class="custom-control-input" id="cgv-validation">
+                    <label class="custom-control-label" for="cgv-validation">J'accepte les C.G.V</label>
+                </div>
+
+                <div class="modal-footer row">
+                    <button class="btn-default close" type="button" role="cancel">
+                        Non merci !
+                    </button>
+
+                    <button class="btn btn-success" disabled type="submit">
+                        Got it!
+                    </button>
+                </div>
+
+            </div>
+        </form>
     </div>
 </div>

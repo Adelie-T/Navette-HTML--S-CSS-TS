@@ -12,7 +12,32 @@ div { //outer-modal est dans un div
         background-color: lighten($modal_background_color, 30%);
         .inner-modal { //inner-modal est un enfant de outer-modal
             @include vertical-centered;
+            @include inner;
             background-color: lighten($modal_background_color, 50);
+            div{
+                &.row {
+                    margin-left: 10;
+                    margin-right: 0;
+                }
+            }
+
+            button[role="cancel"]{
+                &.close{
+                    font-size: 1em;
+                    font-weight: normal;
+                }                
+            }
+
+            form {
+                label {
+                    &.required {
+                        &::after { 
+                            content: "(*)";
+                            
+                        }
+                    }
+                }
+            }
         }
     }
 }
